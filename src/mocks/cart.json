@@ -1,7 +1,9 @@
 {
-  "publisherId": "pubID1",
-  "username": "Erwin's store",
-  "image": "someSuperLongDataURI",
+  "publisher": {
+    "id": "pubID1",
+    "username": "Erwin's store",
+    "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/1.9cba4a79.png"
+  },
   "pickupItems": [
     {
       "itemId": "someID",
@@ -62,5 +64,7 @@
   },
   "awayTime": 0,
   "pickupSlotsMax": 1,
-  "selectedTimes": [16149]
+  "selectedTimes": [
+    16149
+  ]
 }

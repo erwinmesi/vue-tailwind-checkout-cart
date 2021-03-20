@@ -1,6 +1,7 @@
 <template>
-  <div id="app">
-    <VueTwCheckoutCart :cart="cart" />
+  <div id="app" class="p-4">
+    <h4 class="font-semibold text-xl text-gray-600 mb-4">Checkout</h4>
+    <VueTwCheckoutCart :data="cart" />
   </div>
 </template>
 
@@ -23,3 +24,11 @@ export default Vue.extend({
   },
 });
 </script>
+<style scoped lang="scss">
+@import url('https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+html * {
+  font-family: 'Montserrat', sans-serif;
+}
+</style>
