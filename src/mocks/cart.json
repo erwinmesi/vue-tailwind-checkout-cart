@@ -1,0 +1,66 @@
+{
+  "publisherId": "pubID1",
+  "username": "Erwin's store",
+  "image": "someSuperLongDataURI",
+  "pickupItems": [
+    {
+      "itemId": "someID",
+      "name": "My Item",
+      "image": "someDataUriString",
+      "selectedOptions": "option 1, option 2, option 3, option 4",
+      "quantity": 1,
+      "price": 15
+    }
+  ],
+  "deliveryItems": [
+    {
+      "itemId": "someID2",
+      "name": "My Item 2",
+      "image": "someDataUriString",
+      "selectedOptions": "option 1, option 2, option 3",
+      "quantity": 2,
+      "price": 15
+    }
+  ],
+  "pickupLocation": {
+    "name": "My Store Home",
+    "street": "123 elm st",
+    "city": "Rochester",
+    "state": "New York",
+    "zip": "14610"
+  },
+  "deliveryLocation": {
+    "name": "My Home",
+    "street": "456 test st",
+    "city": "Rochester",
+    "state": "New York",
+    "zip": "14610"
+  },
+  "deliveryLeadTime": "3600",
+  "pickupLeadTime": "7200",
+  "pickupSchedule": {
+    "saturday": {
+      "hours": [
+        {
+          "startTime": "0830",
+          "endTime": "1200"
+        },
+        {
+          "startTime": "1300",
+          "endTime": "1700"
+        }
+      ]
+    },
+    "sunday": {
+      "hours": [
+        {
+          "startTime": "1200",
+          "endTime": "1700"
+        }
+      ]
+    }
+  },
+  "awayTime": 0,
+  "pickupSlotsMax": 1,
+  "selectedTimes": [16149]
+}
