@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import VueTwCheckoutCart from '@/VueTwCheckoutCart.vue';
+import VueTwCheckoutCart from '@/components/VueTwCheckoutCart.vue';
 import cart from '@/mocks/cart.json';
 
 export default Vue.extend({

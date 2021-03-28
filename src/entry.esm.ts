@@ -1,7 +1,7 @@
 import _Vue, { PluginObject, VueConstructor } from 'vue';
 
 // Import vue component
-import component from '@/VueTwCheckoutCart.vue';
+import component from '@/components/VueTwCheckoutCart.vue';
 
 // Define typescript interfaces for installable component
 type InstallableComponent = VueConstructor<_Vue> & PluginObject<any>;
