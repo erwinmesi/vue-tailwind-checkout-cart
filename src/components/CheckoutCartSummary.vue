@@ -14,12 +14,18 @@
       <span>Total:</span>
       <span>${{ total.toFixed(2) }}</span>
     </p>
+    <button
+      class="p-2 border border-blue-500 bg-blue-500 rounded text-white focus:outline-none hover:bg-blue-700 hover:border-blue-700 text-sm w-full mt-4"
+      @click="emitEvent('checkout-click', { data, subTotal, taxes, total })"
+    >
+      Checkout
+    </button>
   </div>
 </template>
 <script lang="ts">
 import Vue from 'vue';
 export default Vue.extend({
-  inject: ['data'],
+  inject: ['data', 'emitEvent'],
 
   computed: {
     subTotal() {
@@ -53,8 +59,3 @@ export default Vue.extend({
   },
 });
 </script>
-<style scoped lang="scss">
-.checkout-cart__order-summary {
-  min-width: 320px;
-}
-</style>

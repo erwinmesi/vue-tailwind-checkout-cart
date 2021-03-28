@@ -1,6 +1,6 @@
 {
   "name": "vue-tw-checkout-cart",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Cart checkout component",
   "main": "dist/vue-tw-checkout-cart.ssr.js",
   "browser": "dist/vue-tw-checkout-cart.esm.js",
