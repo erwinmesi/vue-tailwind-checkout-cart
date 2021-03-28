@@ -5,9 +5,9 @@
     <div class="p-4">
       <div class="flex mb-4">
         <div class="delivery__address w-1/2 pr-4">
-          <label class="text-sm text-gray-400 font-semibold mb-2 inline-block"
-            >Address</label
-          >
+          <label class="text-sm text-gray-400 font-semibold mb-2 inline-block">
+            Items to be delivered to
+          </label>
           <p>{{ address.name }}</p>
           <p>{{ address.street }}</p>
           <p>{{ address.city }}, {{ address.state }}, {{ address.zip }}</p>
