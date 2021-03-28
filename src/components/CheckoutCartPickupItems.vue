@@ -1,12 +1,12 @@
 <template>
-  <div class="orders--delivery shadow-md rounded-lg bg-white mb-4">
-    <div class="p-4 font-semibold">Delivery Information</div>
+  <div class="orders--pickup shadow-md rounded-lg bg-white mb-4">
+    <div class="p-4 font-semibold">Pickup Information</div>
     <hr />
     <div class="p-4">
       <div class="flex flex-col md:flex-row mb-4">
-        <div class="delivery__address w-1/2 pr-4 mb-2 md:mb-0">
+        <div class="pickup__address w-1/2 pr-4 mb-2 md:mb-0">
           <label class="text-sm text-gray-400 font-semibold mb-2 inline-block">
-            Items to be delivered to
+            Items to be picked up at
           </label>
           <p>{{ address.name }}</p>
           <p>{{ address.street }}</p>
@@ -14,34 +14,56 @@
           <a
             href="javascript:void(0)"
             class="text-xs text-blue-500 cursor-pointer"
-            @click="emitEvent('edit-delivery-address-click', data)"
+            @click="emitEvent('edit-pickup-address-click', data)"
           >
             Change
           </a>
         </div>
-        <div class="delivery__schedule w-1/2 pr-4">
+        <div v-if="selectedPickupDate" class="pickup__schedule w-1/2 pr-4">
           <label class="text-sm text-gray-400 font-semibold mb-2 inline-block">
-            Estimated Delivery Date
+            Selected Pickup Date
           </label>
           <p>
-            {{ deliveryDate }}
+            {{ selectedPickupDate }}
           </p>
+          <a
+            href="javascript:void(0)"
+            class="text-xs text-blue-500 cursor-pointer"
+            @click="emitEvent('schedule-pickup-click', data)"
+          >
+            Change
+          </a>
+        </div>
+        <div v-else class="pickup__schedule w-1/2 pr-4">
+          <label class="text-sm text-gray-400 font-semibold mb-2 inline-block">
+            Selected Pickup Date
+          </label>
+          <div>
+            <button
+              class="p-2 border border-blue-500 rounded text-blue-500 focus:outline-none text-sm"
+              @click="
+                emitEvent('select-pickup-date-click', { data, suggestedDate })
+              "
+            >
+              Schedule Pickup
+            </button>
+          </div>
         </div>
       </div>
-      <div class="delivery__items mb-4">
+      <div class="pickup__items mb-4">
         <div class="flex justify-between">
           <label class="text-sm text-gray-400 font-semibold mb-2">
-            Delivery Items
+            Pickup Items
           </label>
         </div>
         <div
-          v-for="(item, i) in data.deliveryItems"
+          v-for="(item, i) in data.pickupItems"
           :key="i"
           class="border p-2"
           :class="[
             { 'rounded-t-lg': i === 0 },
-            { 'rounded-b-lg': i === data.deliveryItems.length - 1 },
-            i < data.deliveryItems.length - 1 ? 'border-b-0' : 'border-b',
+            { 'rounded-b-lg': i === data.pickupItems.length - 1 },
+            i < data.pickupItems.length - 1 ? 'border-b-0' : 'border-b',
           ]"
         >
           <div class="flex flex-col md:flex-row items-center">
@@ -72,14 +94,14 @@
             <a
               href="javascript:void(0)"
               class="text-xs text-green-500 cursor-pointer mr-2"
-              @click="emitEvent('update-delivery-item-click', item)"
+              @click="emitEvent('update-pickup-item-click', item)"
             >
               Update
             </a>
             <a
               href="javascript:void(0)"
               class="text-xs text-red-500 cursor-pointer"
-              @click="emitEvent('remove-delivery-item-click', item)"
+              @click="emitEvent('remove-pickup-item-click', item)"
             >
               Remove
             </a>
@@ -92,19 +114,27 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { formatDateWithLeadTime } from '@/helpers/cart.helper';
+import { formatDateWithLeadTime, formatDate } from '@/helpers/cart.helper';
 
 export default Vue.extend({
   inject: ['data', 'emitEvent'],
 
   computed: {
     address() {
-      return (this as any).data.deliveryLocation;
+      return (this as any).data.pickupLocation;
     },
 
-    deliveryDate() {
-      return formatDateWithLeadTime((this as any).data.deliveryLeadTime)
-        .formatted;
+    suggestedDate() {
+      return formatDateWithLeadTime((this as any).data.pickupLeadTime).base;
+    },
+
+    selectedPickupDate() {
+      const vm = this as any;
+      if (!vm.data.selectedPickupDate) {
+        return null;
+      }
+
+      return formatDate(new Date(vm.data.selectedPickupDate)).formatted;
     },
   },
 });

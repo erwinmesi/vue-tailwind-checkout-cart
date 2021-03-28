@@ -2,16 +2,33 @@
   "publisher": {
     "id": "pubID1",
     "username": "Erwin's store",
+    "info": "This is some store information I want my users to know.",
     "image": "https://image.flaticon.com/icons/png/512/1962/1962551.png"
   },
   "pickupItems": [
     {
-      "itemId": "someID",
-      "name": "My Item",
-      "image": "someDataUriString",
-      "selectedOptions": "option 1, option 2, option 3, option 4",
+      "itemId": "1",
+      "name": "Apple iMac",
+      "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/3.29c766f8.png",
+      "selectedOptions": "27-inch, Silver",
       "quantity": 1,
-      "price": 15
+      "price": 999.99
+    },
+    {
+      "itemId": "2",
+      "name": "Apple Watch Series 5",
+      "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/1.3b312012.png",
+      "selectedOptions": "Nike Version, Steel Frame, Pink Rubber Band",
+      "quantity": 3,
+      "price": 339.99
+    },
+    {
+      "itemId": "3",
+      "name": "Apple iPhone 11",
+      "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/2.1aba2cea.png",
+      "selectedOptions": "64GB, Black",
+      "quantity": 2,
+      "price": 669.99
     }
   ],
   "deliveryItems": [
@@ -20,32 +37,32 @@
       "name": "Apple Watch Series 5",
       "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/1.3b312012.png",
       "selectedOptions": "Nike Version, Steel Frame, Pink Rubber Band",
-      "quantity": 2,
-      "price": 15
+      "quantity": 3,
+      "price": 339.99
     },
     {
       "itemId": "2",
-      "name": "Apple Watch Series 5",
-      "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/1.3b312012.png",
-      "selectedOptions": "Nike Version, Steel Frame, Pink Rubber Band",
+      "name": "Apple iPhone 11",
+      "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/2.1aba2cea.png",
+      "selectedOptions": "64GB, Black",
       "quantity": 2,
-      "price": 15
+      "price": 669.99
     },
     {
-      "itemId": "2",
-      "name": "Apple Watch Series 5",
-      "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/1.3b312012.png",
-      "selectedOptions": "Nike Version, Steel Frame, Pink Rubber Band",
-      "quantity": 2,
-      "price": 15
+      "itemId": "3",
+      "name": "Apple iMac",
+      "image": "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/3.29c766f8.png",
+      "selectedOptions": "27-inch, Silver",
+      "quantity": 1,
+      "price": 999.99
     }
   ],
   "pickupLocation": {
-    "name": "My Store Home",
-    "street": "123 elm st",
-    "city": "Rochester",
-    "state": "New York",
-    "zip": "14610"
+    "name": "Roomph - Buendia",
+    "street": "64 Sen. Gil Puyat",
+    "city": "Makati",
+    "state": "Metro Manila",
+    "zip": "1234"
   },
   "deliveryLocation": {
     "name": "Princess Homes House",
@@ -80,5 +97,6 @@
   },
   "awayTime": 0,
   "pickupSlotsMax": 1,
+  "selectedPickupDate": "Sat Apr 03 2021 04:58:55 GMT+0800 (Philippine Standard Time)",
   "selectedTimes": [16149]
 }

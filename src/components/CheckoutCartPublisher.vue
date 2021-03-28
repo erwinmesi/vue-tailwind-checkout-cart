@@ -11,25 +11,29 @@
         />
       </div>
       <div class="flex flex-col justify-center">
-        <h4 class="font-semibold text-xl text-blue-500">{{ publisher.username }}</h4>
+        <h4 class="font-semibold text-xl text-blue-500">
+          {{ publisher.username }}
+        </h4>
         <p class="text-sm mb-2">
-          This is some store information I want my users to know.
+          {{ publisher.info }}
         </p>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
   inject: ['data'],
 
   computed: {
     publisher() {
-      return this.data.publisher || {};
+      return (this as any).data.publisher || {};
     },
   },
-};
+});
 </script>
 
 <style>
