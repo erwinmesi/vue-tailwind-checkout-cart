@@ -73,6 +73,7 @@
   },
   "deliveryLeadTime": "3600",
   "pickupLeadTime": "7200",
+  "tax": 0.12,
   "pickupSchedule": {
     "saturday": {
       "hours": [

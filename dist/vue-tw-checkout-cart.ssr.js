@@ -185,10 +185,8 @@ var __vue_component__$4 = /*#__PURE__*/normalizeComponent({
       return deliveryItemsTotal + pickupItemsTotal;
     },
     taxes: function taxes() {
-      var _vm$data2;
-
       var vm = this;
-      return vm.subTotal * (((_vm$data2 = vm.data) === null || _vm$data2 === void 0 ? void 0 : _vm$data2.tax) || 0.5);
+      return vm.subTotal * (vm.data.tax || 0);
     },
     total: function total() {
       var vm = this;
@@ -228,7 +226,7 @@ var __vue_inject_styles__$3 = undefined;
 var __vue_scope_id__$3 = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$3 = "data-v-a50ba5f8";
+var __vue_module_identifier__$3 = "data-v-455fa9d4";
 /* functional template */
 
 var __vue_is_functional_template__$3 = false;

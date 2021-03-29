@@ -40,7 +40,7 @@ export default Vue.extend({
 
     taxes() {
       const vm = this as any;
-      return vm.subTotal * (vm.data?.tax || 0.5);
+      return vm.subTotal * (vm.data.tax || 0);
     },
 
     total() {

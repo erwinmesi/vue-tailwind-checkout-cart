@@ -161,7 +161,7 @@ var script$3 = Vue.extend({
 
     taxes() {
       const vm = this;
-      return vm.subTotal * (vm.data?.tax || 0.5);
+      return vm.subTotal * (vm.data.tax || 0);
     },
 
     total() {
