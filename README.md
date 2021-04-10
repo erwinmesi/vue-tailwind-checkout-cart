@@ -27,3 +27,9 @@ Params: `{ data, suggestedDate }`
 **For the summary:**<br>
 Event: `@checkout-click`<br>
 Params: `{ data, subTotal, taxes, total }`
+
+# Props:
+
+**Tailwind Background Color (optional)**<br>
+To set the background color for the Component<br>
+`tw-bg-color="bg-gray-100"`
