@@ -472,14 +472,17 @@ var __vue_render__$1 = function () {
     },
     on: {
       "click": function ($event) {
-        return _vm.emitEvent('schedule-pickup-click', _vm.data);
+        return _vm.emitEvent('schedule-pickup-click', {
+          data: _vm.data,
+          suggestedDate: _vm.data.selectedPickupDate
+        });
       }
     }
   }, [_vm._v("\n            Change\n          ")])] : [_c('div', [_c('button', {
     staticClass: "p-2 border border-blue-500 rounded text-blue-500 focus:outline-none hover:bg-blue-100 text-sm",
     on: {
       "click": function ($event) {
-        return _vm.emitEvent('select-pickup-date-click', {
+        return _vm.emitEvent('schedule-pickup-click', {
           data: _vm.data,
           suggestedDate: _vm.suggestedDate
         });

@@ -352,7 +352,7 @@ var __vue_inject_styles__$1 = undefined;
 var __vue_scope_id__$1 = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$1 = "data-v-088f4cb9";
+var __vue_module_identifier__$1 = "data-v-3abdaf61";
 /* functional template */
 
 var __vue_is_functional_template__$1 = false;

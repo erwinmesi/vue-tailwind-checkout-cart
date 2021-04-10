@@ -30,7 +30,12 @@
             <a
               href="javascript:void(0)"
               class="text-xs text-blue-500 cursor-pointer hover:text-blue-700"
-              @click="emitEvent('schedule-pickup-click', data)"
+              @click="
+                emitEvent('schedule-pickup-click', {
+                  data,
+                  suggestedDate: data.selectedPickupDate,
+                })
+              "
             >
               Change
             </a>
@@ -40,7 +45,7 @@
               <button
                 class="p-2 border border-blue-500 rounded text-blue-500 focus:outline-none hover:bg-blue-100 text-sm"
                 @click="
-                  emitEvent('select-pickup-date-click', { data, suggestedDate })
+                  emitEvent('schedule-pickup-click', { data, suggestedDate })
                 "
               >
                 Schedule Pickup

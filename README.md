@@ -22,9 +22,6 @@ Event: `@remove-pickup-item-click`<br>
 Params: `item`
 
 Event: `@schedule-pickup-click`<br>
-Params: `data`
-
-Event: `@select-pickup-date-click`<br>
 Params: `{ data, suggestedDate }`
 
 **For the summary:**<br>
