@@ -701,9 +701,11 @@ var __vue_render__ = function () {
     staticClass: "mb-4"
   }) : _vm._e(), _vm._v(" "), _c('div', {
     staticClass: "flex flex-col md:flex-row"
-  }, [_vm.deliveryItems.length || _vm.pickupItems.length ? _c('div', {
+  }, [_c('div', {
     staticClass: "checkout-cart__orders flex flex-col flex-grow"
-  }, [_vm.deliveryItems.length ? _c('CheckoutCartDeliveryItems') : _vm._e(), _vm._v(" "), _vm.pickupItems.length ? _c('CheckoutCartPickupItems') : _vm._e()], 1) : _vm._e(), _vm._v(" "), _c('div', {
+  }, [_vm.deliveryItems.length || _vm.pickupItems.length ? [_vm.deliveryItems.length ? _c('CheckoutCartDeliveryItems') : _vm._e(), _vm._v(" "), _vm.pickupItems.length ? _c('CheckoutCartPickupItems') : _vm._e()] : _c('div', {
+    staticClass: "shadow-md rounded-lg bg-white mb-4 p-4"
+  }, [_vm._v("\n        No orders to show.\n      ")])], 2), _vm._v(" "), _c('div', {
     staticClass: "md:ml-4"
   }, [_c('CheckoutCartSummary', {
     staticClass: "p-5 sticky top-4"
@@ -715,8 +717,8 @@ var __vue_staticRenderFns__ = [];
 
 const __vue_inject_styles__ = function (inject) {
   if (!inject) return;
-  inject("data-v-6b72efe4_0", {
-    source: ".checkout-cart__order-summary[data-v-6b72efe4]{min-width:320px}",
+  inject("data-v-a96ee62c_0", {
+    source: ".checkout-cart__order-summary[data-v-a96ee62c]{min-width:320px}",
     map: undefined,
     media: undefined
   });
@@ -724,7 +726,7 @@ const __vue_inject_styles__ = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__ = "data-v-6b72efe4";
+const __vue_scope_id__ = "data-v-a96ee62c";
 /* module identifier */
 
 const __vue_module_identifier__ = undefined;

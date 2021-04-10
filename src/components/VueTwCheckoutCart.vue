@@ -2,12 +2,14 @@
   <div class="vue-tw-checkout-cart p-2" :class="twBgColor">
     <CheckoutCartPublisher v-if="data.publisher" class="mb-4" />
     <div class="flex flex-col md:flex-row">
-      <div
-        class="checkout-cart__orders flex flex-col flex-grow"
-        v-if="deliveryItems.length || pickupItems.length"
-      >
-        <CheckoutCartDeliveryItems v-if="deliveryItems.length" />
-        <CheckoutCartPickupItems v-if="pickupItems.length" />
+      <div class="checkout-cart__orders flex flex-col flex-grow">
+        <template v-if="deliveryItems.length || pickupItems.length">
+          <CheckoutCartDeliveryItems v-if="deliveryItems.length" />
+          <CheckoutCartPickupItems v-if="pickupItems.length" />
+        </template>
+        <div v-else class="shadow-md rounded-lg bg-white mb-4 p-4">
+          No orders to show.
+        </div>
       </div>
       <div class="md:ml-4">
         <CheckoutCartSummary class="p-5 sticky top-4" />

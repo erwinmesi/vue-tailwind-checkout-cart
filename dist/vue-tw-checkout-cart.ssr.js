@@ -459,7 +459,7 @@ var __vue_render__ = function __vue_render__() {
     class: _vm.twBgColor
   }, [_vm.data.publisher ? _c('CheckoutCartPublisher', {
     staticClass: "mb-4"
-  }) : _vm._e(), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"flex flex-col md:flex-row\" data-v-6b72efe4>", "</div>", [_vm.deliveryItems.length || _vm.pickupItems.length ? _vm._ssrNode("<div class=\"checkout-cart__orders flex flex-col flex-grow\" data-v-6b72efe4>", "</div>", [_vm.deliveryItems.length ? _c('CheckoutCartDeliveryItems') : _vm._e(), _vm._ssrNode(" "), _vm.pickupItems.length ? _c('CheckoutCartPickupItems') : _vm._e()], 2) : _vm._e(), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"md:ml-4\" data-v-6b72efe4>", "</div>", [_c('CheckoutCartSummary', {
+  }) : _vm._e(), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"flex flex-col md:flex-row\" data-v-a96ee62c>", "</div>", [_vm._ssrNode("<div class=\"checkout-cart__orders flex flex-col flex-grow\" data-v-a96ee62c>", "</div>", [_vm.deliveryItems.length || _vm.pickupItems.length ? [_vm.deliveryItems.length ? _c('CheckoutCartDeliveryItems') : _vm._e(), _vm._ssrNode(" "), _vm.pickupItems.length ? _c('CheckoutCartPickupItems') : _vm._e()] : _vm._ssrNode("<div class=\"shadow-md rounded-lg bg-white mb-4 p-4\" data-v-a96ee62c>\n        No orders to show.\n      </div>")], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"md:ml-4\" data-v-a96ee62c>", "</div>", [_c('CheckoutCartSummary', {
     staticClass: "p-5 sticky top-4"
   })], 1)], 2)], 2);
 };
@@ -469,8 +469,8 @@ var __vue_staticRenderFns__ = [];
 
 var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-6b72efe4_0", {
-    source: ".checkout-cart__order-summary[data-v-6b72efe4]{min-width:320px}",
+  inject("data-v-a96ee62c_0", {
+    source: ".checkout-cart__order-summary[data-v-a96ee62c]{min-width:320px}",
     map: undefined,
     media: undefined
   });
@@ -478,10 +478,10 @@ var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__ = "data-v-6b72efe4";
+var __vue_scope_id__ = "data-v-a96ee62c";
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-6b72efe4";
+var __vue_module_identifier__ = "data-v-a96ee62c";
 /* functional template */
 
 var __vue_is_functional_template__ = false;
